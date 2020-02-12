@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.company.Controller"
+            stylesheets="@Style.css"
+            onKeyPressed="#onKeyDown">
+    <padding>
+
+    </padding>
+            <top>
+                <VBox alignment="CENTER">
+                    <Label fx:id="labelTitle" text="24" BorderPane.alignment="CENTER"/>
+                    <Label fx:id="labelInstructions" text="use all 4 random numbers and simple mathematical operations to reach 24" wrapText="true" BorderPane.alignment="CENTER"/>
+                </VBox>
+            </top>
+
+            <center>
+                <VBox spacing="10" alignment="CENTER">
+                    <GridPane alignment="CENTER" hgap="7" vgap="7">
+                        <Label fx:id="labelN1" GridPane.rowIndex="0" GridPane.columnIndex="0" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                        <Label fx:id="labelN2" GridPane.rowIndex="0" GridPane.columnIndex="1" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                        <Label fx:id="labelN3" GridPane.rowIndex="1" GridPane.columnIndex="0" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                        <Label fx:id="labelN4" GridPane.rowIndex="1" GridPane.columnIndex="1" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                    </GridPane>
+                    <HBox spacing="7" alignment="CENTER">
+                        <Label fx:id="subButton" text="-" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                        <Label fx:id="addButton" text="+" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                        <Label fx:id="delButton" text="del" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                    </HBox>
+                    <HBox spacing="7" alignment="CENTER">
+                        <Label fx:id="divButton" text="/" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                        <Label fx:id="mulButton" text="x" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                        <Label fx:id="clearButton" text="clear" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                    </HBox>
+                    <HBox spacing="7" alignment="CENTER">
+                        <Label fx:id="lbracButton" text="(" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                        <Label fx:id="rbracButton" text=")" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                        <Label fx:id="dbracButton" text="(x)" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+
+                    </HBox>
+                    <Label fx:id="labelConsole" text="..."/>
+                    <Label fx:id="labelResult"/>
+                    <Label fx:id="controlButton" onMouseEntered="#onMouseOver" onMouseExited="#onMouseOut" onMouseClicked="#onMouseDown"/>
+                </VBox>
+            </center>
+
+            <bottom>
+
+                <HBox>
+                    <HBox alignment="BOTTOM_LEFT">
+                        <Label fx:id="labelScore" text="Score: "/>
+                        <Label fx:id="labelThescore" text="0"/>
+                    </HBox>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <HBox>
+                        <Label fx:id="labelSeconds" text="30"/>
+                        <Label fx:id="labelDseconds" text="00"/>
+                    </HBox>
+                </HBox>
+
+            </bottom>
+
+</BorderPane>
